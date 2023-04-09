@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 
+# This function draws bounding boxes and their associated class names.
 def bbox_drawer(res, frame, model):
     bboxes = np.array(res.boxes.xyxy.cpu(), dtype="int")
     classes = np.array(res.boxes.cls.cpu(), dtype="int")
